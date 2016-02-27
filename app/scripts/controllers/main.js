@@ -9,7 +9,7 @@
  */
 angular.module('instantAdministrationClientApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
+    this.awesomeThings2 = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
