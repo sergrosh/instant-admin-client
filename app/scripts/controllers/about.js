@@ -43,10 +43,38 @@ angular.module('instantAdministrationClientApp')
                 });
 
         });
-    })
-    .controller('TableStructureController', function($scope){
-        $scope.selectedTableStructure = selectModel;
+        $scope.hello = {name: "Boaz"};
+        $scope.newName = "";
+        $scope.sendPost = function() {
+            var data = $.param({
+                //json: JSON.stringify({
+                //    name: $scope.newName
+                //})
+                name : $scope.newName
+            });
+            // http://httpbin.org/ for DEMO post data
+            $http.post("http://httpbin.org/post", data).success(function(data, status) {
+                $scope.hello = data;
+            })
+        }
     });
+    //.controller('VenuePOSTController', function($scope, $http){
+    //    $scope.hello = {name: "Boaz"};
+    //    $scope.newName = "";
+    //    $scope.sendPost = function() {
+    //        var data = $.param({
+    //            json: JSON.stringify({
+    //                name: $scope.newName
+    //            })
+    //        });
+    //        $http.post("url", data).success(function(data, status) {
+    //            $scope.hello = data;
+    //        })
+    //    }
+    //})
+    //.controller('TableStructureController', function($scope){
+    //    $scope.selectedTableStructure = selectModel;
+    //});
 
 //Works on views when using controllerAs on call as [controller as name].awesomeThings
 //http://stackoverflow.com/questions/31820844/yeoman-generated-angularjs-ng-repeat-not-showing-data-from-controller

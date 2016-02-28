@@ -1,4 +1,4 @@
-<p>This is the about view.</p>
+<p>GET Request / Table with item data</p>
 
 <!--<div ng-repeat="contentJson in x.content |limitTo:1">-->
     <!--<div ng-dropdown-multiselect="" ng-repeat="(key,data) in contentJson" options="{{key}}" selected-model="example1model">{{key}}</div>-->
@@ -71,3 +71,11 @@
     </tbody>
 </table>
 
+
+<p>POST Request / Request to Demo Server</p>
+<form ng-submit="sendPost()">
+    <input ng-model="newName"/>
+    <button type="submit">Send</button>
+</form>
+
+<p>{{hello}}</p>
