@@ -17,12 +17,12 @@ angular.module('instantAdministrationClientApp')
     .controller('AboutCtrl', function ($scope, $http) {
         $http.get(url, {
             params: {
-                category: 'restaurant',
-                query: 'a'
+                category: '',
+                query: ''
             }
         })
         .success(function (data) {
-            $scope.x = [data];
+            $scope.x = data;
         });
     });
 

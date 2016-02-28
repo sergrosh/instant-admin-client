@@ -1,6 +1,61 @@
 <p>This is the about view.</p>
-<ul>
-    <li ng-repeat="a in x">
-        {{ a.size }} -
-    </li>
-</ul>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Category</th>
+            <!--<th>Company</th>-->
+            <!--<th>Email</th>-->
+            <!--<th>phonePrimary</th>-->
+            <!--<th>phoneSecondary</th>-->
+            <!--<th>mobilePrimary</th>-->
+            <!--<th>mobileSecondary</th>-->
+            <!--<th>facebookPage</th>-->
+            <!--<th>website</th>-->
+            <!--<th>address</th>-->
+            <!--<th>imagePath</th>-->
+            <!--<th>description</th>-->
+            <!--<th>speciality</th>-->
+            <!--<th>menu</th>-->
+            <!--<th>gallery</th>-->
+            <!--<th>rating</th>-->
+            <!--<th>reviews</th>-->
+            <!--<th>likes</th>-->
+            <!--<th>specialities</th>-->
+            <!--<th>location</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="a in x.content">
+            <th>{{ a.id }}</th>
+            <td>{{ a.name }}</td>
+            <td>{{ a.country }}</td>
+            <td>{{ a.city }}</td>
+            <td>{{ a.category }}</td>
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
+        </tr>
+
+    </tbody>
+</table>
+
