@@ -23,7 +23,29 @@ angular.module('instantAdministrationClientApp')
         })
         .success(function (data) {
             $scope.x = data;
+            $scope.contentKeys = [];
+            //angular.forEach(data.content, function(c) {
+            //    console.log(c.name);
+            //    //$scope.contentKeys.push(c.property);
+            //    angular.forEach(c, function(value, key){
+            //        $scope.contentKeys.push(key);
+            //    });
+            //
+            //});
+                // http://stackoverflow.com/a/31268625/3478174
+                // Using some instead of forEach since its same functionality + allows break on true return.
+                // For each CAN NOT break
+                data.content.some(function(c){
+                    angular.forEach(c, function(value, key){
+                        $scope.contentKeys.push(key);
+                    });
+                    return true;
+                });
+
         });
+    })
+    .controller('TableStructureController', function($scope){
+        $scope.selectedTableStructure = selectModel;
     });
 
 //Works on views when using controllerAs on call as [controller as name].awesomeThings

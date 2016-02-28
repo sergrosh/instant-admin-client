@@ -1,12 +1,24 @@
 <p>This is the about view.</p>
+
+<!--<div ng-repeat="contentJson in x.content |limitTo:1">-->
+    <!--<div ng-dropdown-multiselect="" ng-repeat="(key,data) in contentJson" options="{{key}}" selected-model="example1model">{{key}}</div>-->
+<!--</div>-->
+
+
+<multiselect ng-model="selectModel" options="c for c in contentKeys" data-multiple="true"></multiselect>
+
+
+<!--<p>{{contentKeys}}</p>-->
+<p>{{selectModel}}</p>
+
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Country</th>
-            <th>City</th>
-            <th>Category</th>
+            <th ng-repeat="jsonContentKey in selectModel" >{{jsonContentKey}}</th>
+            <!--<th>Name</th>-->
+            <!--<th>Country</th>-->
+            <!--<th>City</th>-->
+            <!--<th>Category</th>-->
             <!--<th>Company</th>-->
             <!--<th>Email</th>-->
             <!--<th>phonePrimary</th>-->
@@ -30,11 +42,11 @@
     </thead>
     <tbody>
         <tr ng-repeat="a in x.content">
-            <th>{{ a.id }}</th>
-            <td>{{ a.name }}</td>
-            <td>{{ a.country }}</td>
-            <td>{{ a.city }}</td>
-            <td>{{ a.category }}</td>
+            <td ng-repeat="jsonContentKey in selectModel">{{a[jsonContentKey]}} </td>
+            <!--<td>{{ a.name }}</td>-->
+            <!--<td>{{ a.country }}</td>-->
+            <!--<td>{{ a.city }}</td>-->
+            <!--<td>{{ a.category }}</td>-->
             <!--<td>{{ a.category }}</td>-->
             <!--<td>{{ a.category }}</td>-->
             <!--<td>{{ a.category }}</td>-->

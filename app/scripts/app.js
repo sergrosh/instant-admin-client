@@ -17,7 +17,8 @@ angular
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'ui.multiselect'
     ])
 
     .config(function ($httpProvider, $routeProvider) {
